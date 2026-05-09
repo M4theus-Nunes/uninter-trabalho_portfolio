@@ -1,0 +1,283 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+body.tema--escuro {
+    background-color: #000;
+}
+
+body.tema--escuro section {
+    background-color: #1f2937;
+    color: white;
+}
+
+body.tema--escuro section h2 {
+    color: white;
+}
+
+/* ==== CABEÇALHO ==== */
+
+header {
+    background-color: #1f2937;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 15px;
+}
+
+/* ==== NAVEGAÇÃO ==== */
+
+.navegacao__lista {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+}
+
+.navegacao__item a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.navegacao__item a:hover {
+    color: #60a5fa;
+}
+
+/* ===== MENU HAMBURGUER ===== */
+
+.botao-menu {
+    display: none;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* ==== CONTEÚDO PRINCIPAL ==== */
+
+main {
+    max-width: 70vw;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+section {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    margin-bottom: 15px;
+    color: #1f2937;
+}
+
+section p {
+    text-align: justify;
+}
+
+section ul {
+    padding-left: 20px;
+}
+
+.link-externo {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.link-externo:hover {
+    color: #598dfd;
+}
+
+.link-externo::after {
+    content: ' ↗';
+}
+
+/* ==== TEMA ESCURO ==== */
+
+body.tema--escuro .link-externo {
+    color: #74b0fa;
+}
+
+body.tema--escuro .link-externo:hover {
+    color: #4d9df8;
+}
+
+/* ==== BOTÃO TEMA ==== */
+
+#botaoTema {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    background-color: #1f2937;
+
+}
+
+#botaoTema:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+#botaoTema:active {
+    transform: scale(0.95);
+}
+
+/* ==== FORMULÁRIO ==== */
+
+.formulario {
+    margin-top: 20px;
+}
+
+.formulario__grupo {
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario__grupo label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.formulario__grupo input,
+.formulario__grupo textarea {
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: normal;
+    font-family: inherit;
+}
+
+.formulario__grupo textarea {
+    resize: none;
+    min-height: 120px;
+}
+
+.formulario__botao {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.formulario__botao:hover {
+    background-color: #1d4ed8;
+}
+
+/* ==== RODAPÉ ==== */
+
+footer {
+    background-color: #1f2937;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+/* ==== RESPONSIVIDADE ==== */
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 24px;
+        margin-bottom:0px
+    }
+
+    .botao-menu {
+        display: block;
+    }
+
+    .navegacao {
+        display: none;
+        position: absolute;
+        top: 50px;
+        left: 0px;
+        background-color: #1f2937;
+        padding: 15px;
+        border-radius: 10px;
+        width: 200px;
+    }
+
+    .navegacao.ativo {
+        display: block;
+    }
+
+    .navegacao__lista {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    main {
+        max-width: 100%;
+        margin: 20px auto;
+        padding: 0 15px;
+    }
+
+    section {
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    section h2 {
+        font-size: 22px;
+    }
+
+    section p {
+        font-size: 15px;
+    }
+
+    .formulario__grupo input,
+    .formulario__grupo textarea {
+        font-size: 15px;
+        padding: 10px;
+    }
+
+    .formulario__botao {
+        width: 100%;
+    }
+
+    footer {
+        padding: 15px;
+    }
+}
